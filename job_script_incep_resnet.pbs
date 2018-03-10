@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS –N training
+#PBS –l select=1:ncpus=4
+#PBS –q gpu
+#PBS –l walltime=23:30:00
+#PBS -o ~/outputfiles/train.o
+#PBS –e ~/errorfiles/train.e
+
+module load tensorflow/1.0+keras
+python /home/users/nus/e0227268/kaggle/Scripts/incep_resnet.py

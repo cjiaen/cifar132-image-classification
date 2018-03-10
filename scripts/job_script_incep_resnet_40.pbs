@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l select=1:ncpus=4
+#PBS -N train_ir2_all_40
+#PBS -q gpu
+#PBS -l walltime=23:30:00
+#PBS -o /home/users/nus/e0227268/train_ir2_all_40.o
+#PBS -e /home/users/nus/e0227268/train_ir2_all_40.e
+
+module load tensorflow/1.0+keras
+python /home/users/nus/e0227268/kaggle/Scripts/incep_resnet_40.py

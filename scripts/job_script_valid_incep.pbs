@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS –q gpu
+#PBS –l select=1:ncpus=1:mem=100M
+#PBS –l walltime=12:00:00
+#PBS –N validation_incepv3
+#PBS -o /home/users/nus/e0227268/incep_valid.o
+#PBS –e /home/users/nus/e0227268/incep_valid.e
+
+module load tensorflow/1.0+keras
+python /home/users/nus/e0227268/kaggle/Scripts/inceptionv3_validation.py
